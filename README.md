@@ -1,7 +1,9 @@
 # maintain-wan-lease
 Resolve problem with Asus Merlin routers in terms of release/renew of udhcpc.
 
-For background see here: http://www.snbforums.com/threads/problem-udhcpc-does-not-deconfig-upon-wan-cable-disconnect.74397/
+For background see here: 
+
+http://www.snbforums.com/threads/problem-udhcpc-does-not-deconfig-upon-wan-cable-disconnect.74397/
 
 One way to install is to place the script inside /jffs/scripts - see here:
 
