@@ -1,5 +1,5 @@
 # maintain-wan-lease
-Resolve problem with Asus Merlin routers in terms of release/renew of udhcpc.
+Resolve problem with Asus Merlin routers in terms of release/renew of udhcpc. Namely if a modem such as the B818-263 drops eth0, then absent a udhcpc release/renew, a loss in internet connectivity can result. It seems by default Asus routers do not issue the appropriate udhcpc release/renew. This script resolves this in an efficient manner by monitoring the eth0 interface and reacting to changes as the occur.  
 
 For background see here: 
 
@@ -12,6 +12,8 @@ https://github.com/RMerl/asuswrt-merlin.ng/wiki/User-scripts
 And then setup or edit 'post-mount' to include the line:
 
 /jffs/scripts/maintain-wan-lease &
+
+To test, try manually unplugging eth0 and placing it back in the router. You should see the appropriate lines end up on the system log confirming release and renew. 
 
 For further support, please consult the snbforums forum. 
 
