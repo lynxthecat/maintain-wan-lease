@@ -3,7 +3,7 @@ Keywords: Asus Merlin, WAN IP renewal, WAN LED indicator red and modem bridge mo
 
 Resolve problem with Asus Merlin routers in terms of release/renew of udhcpc.
 
-Namely if a modem set up in bridge mode such as the Huawei B818-263 drops eth0, then absent a udhcpc release/renew, a loss in internet connectivity can result. It seems by default Asus routers do not issue the appropriate udhcpc release/renew. This script resolves this in an efficient manner by monitoring the eth0 interface and reacting to changes as they occur.  
+Namely if a modem set up in bridge mode such as the Huawei B818-263 drops eth0, then absent a udhcpc release/renew, a loss in internet connectivity can result. It seems by default Asus routers do not issue the appropriate udhcpc release/renew calls. This script resolves this in an efficient manner by monitoring the eth0 interface and reacting to changes as they occur.  
 
 For background see here: 
 
