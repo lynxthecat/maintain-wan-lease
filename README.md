@@ -5,6 +5,8 @@ For background see here:
 
 http://www.snbforums.com/threads/problem-udhcpc-does-not-deconfig-upon-wan-cable-disconnect.74397/
 
+http://www.snbforums.com/threads/router-not-getting-internet-back-after-wan-drop.71954/post-709554
+
 One way to install is to place the script inside /jffs/scripts - see here:
 
 https://github.com/RMerl/asuswrt-merlin.ng/wiki/User-scripts
