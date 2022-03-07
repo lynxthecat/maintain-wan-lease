@@ -13,7 +13,7 @@ And then setup or edit 'post-mount' to include the line:
 
 /jffs/scripts/maintain-wan-lease &
 
-For further support, please consult the snbforums. 
+For further support, please consult the snbforums forum. 
 
 See for example this post:
 
