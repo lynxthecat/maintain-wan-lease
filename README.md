@@ -11,7 +11,7 @@ http://www.snbforums.com/threads/router-not-getting-internet-back-after-wan-drop
 
 http://www.snbforums.com/threads/problem-udhcpc-does-not-deconfig-upon-wan-cable-disconnect.74397/
 
-One way to install it is to place the script inside /jffs/scripts, chmod +x maintain-wan-lease, and then create or edit 'post-mount' inside /jffs/scripts/ such that it includes at least the lines:
+One way to install it is to place the script inside /jffs/scripts/, chmod +x maintain-wan-lease, and then create or edit 'post-mount' inside /jffs/scripts/ such that it includes at least the lines:
 
 ```
 #!/bin/sh
