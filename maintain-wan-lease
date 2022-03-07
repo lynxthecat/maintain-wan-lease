@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 renew_wan_lease=0
 
