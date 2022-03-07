@@ -7,13 +7,15 @@ http://www.snbforums.com/threads/router-not-getting-internet-back-after-wan-drop
 
 http://www.snbforums.com/threads/problem-udhcpc-does-not-deconfig-upon-wan-cable-disconnect.74397/
 
-One way to install is to place the script inside /jffs/scripts - see here:
-
-https://github.com/RMerl/asuswrt-merlin.ng/wiki/User-scripts
+One way to install is to place the script inside /jffs/scripts, chmod +x it
 
 And then setup or edit 'post-mount' to include the line:
 
 /jffs/scripts/maintain-wan-lease &
+
+See here for details concerning setting up scripts in Asus Merlin:
+
+https://github.com/RMerl/asuswrt-merlin.ng/wiki/User-scripts
 
 To test, try manually unplugging eth0 and placing it back in the router. You should see the appropriate lines end up on the system log confirming release and renew. 
 
