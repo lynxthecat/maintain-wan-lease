@@ -27,7 +27,9 @@ https://github.com/RMerl/asuswrt-merlin.ng/wiki/User-scripts
 
 To test, try manually unplugging eth0 and plugging it back into the router. You should see the appropriate lines end up on the system log confirming release and renew. 
 
-For further support, please consult the snbforums forum. 
+For further support, please consult the snbforums forum here:
+
+https://www.snbforums.com/forums/asuswrt-merlin.42/
 
 See for example this post:
 
