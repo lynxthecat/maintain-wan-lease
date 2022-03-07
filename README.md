@@ -9,9 +9,11 @@ http://www.snbforums.com/threads/problem-udhcpc-does-not-deconfig-upon-wan-cable
 
 One way to install is to place the script inside /jffs/scripts, chmod +x maintain-wan-lease, and then create or edit 'post-mount' inside /jffs/scripts/ such that it includes at least the lines:
 
+```
 #!/bin/sh
 
 /jffs/scripts/maintain-wan-lease &
+```
 
 Then chmod +x post-mount. 
 
