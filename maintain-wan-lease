@@ -1,0 +1,28 @@
+#!/bin/bash
+
+renew_wan_lease=0
+
+ip monitor link dev eth0 | while read event; do
+	
+	# logger "maintain-wan-lease detected eth0 event: "$event
+
+	case $event in
+
+	*'NO-CARRIER'* )
+		if [ $renew_wan_lease -eq 0 ]; then
+			logger "maintain-wan-lease detected eth0 state change to: 'NO-CARRIER', so forcing udhcpc to release wan lease."
+			killall -SIGUSR2 udhcpc
+			renew_wan_lease=1		
+		fi
+	;;
+
+	*'LOWER_UP'* )
+		if [ $renew_wan_lease -eq 1 ]; then
+			logger "maintain-wan-lease detected eth0 state change from: 'NO-CARRIER' to: 'LOWER_UP', so forcing udhcpc to renew wan lease."
+			killall -SIGUSR1 udhcpc
+			renew_wan_lease=0
+		fi
+	;;
+	esac
+
+done
